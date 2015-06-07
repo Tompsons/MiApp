@@ -4,14 +4,22 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
-
+import android.widget.TextView;
 
 public class SaludoActivity extends ActionBarActivity {
+
+    private TextView txtSaludo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_saludo);
+
+        this.txtSaludo = (TextView) findViewById(R.id.TxtSaludo);
+
+        Bundle bundle = this.getIntent().getExtras();
+
+        this.txtSaludo.setText("Hola " + bundle.getString("NOMBRE"));
     }
 
     @Override
