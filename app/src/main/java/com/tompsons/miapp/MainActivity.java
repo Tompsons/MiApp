@@ -23,7 +23,7 @@ public class MainActivity extends ActionBarActivity {
         txtNombre = (EditText) findViewById(R.id.TxtNombre);
         btnAceptar = (Button) findViewById(R.id.BtnAceptar);
 
-        // Implementamos el evento click del botón
+        // Implementamos el evento click del boton
         btnAceptar.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -31,11 +31,11 @@ public class MainActivity extends ActionBarActivity {
                 // Creamos el Intent
                 Intent intent = new Intent(MainActivity.this, SaludoActivity.class);
 
-                // Creamos la información a pasar entre actividades
+                // Creamos la informacion a pasar entre actividades
                 Bundle b = new Bundle();
                 b.putString("NOMBRE", txtNombre.getText().toString());
 
-                // Añadimos la información al intent
+                // Agregamos la informacion al intent
                 intent.putExtras(b);
 
                 // Iniciamos la nueva actividad
